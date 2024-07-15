@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpClient, HttpEvent} from "@angular/common/http";
-import {Observable} from "rxjs";
+import { HttpClient, HttpEvent } from "@angular/common/http";
+import { Observable } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,7 @@ export class FileService {
 
       // Erhalte Zugriff auf die gesamte Sequenz von HttpEvents, nicht nur den finalen Inhalt
       observe: 'events'
-    } );
+    });
   }
 
   download(filename: string): Observable<HttpEvent<Blob>> {
@@ -32,6 +32,6 @@ export class FileService {
 
       // teile Angular mit, dass die erwartete Antwort ein Blob-Objekt ist, das typischerweise für binäre Daten wie Dateien verwendet wird.
       responseType: 'blob'
-    } );
+    });
   }
 }
